@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 //Register
-router.post('/register' , (req , res , next) => {
+router.get('/register' , (req , res , next) => {
     res.send('REGISTER');
 });
 
 //Authenticate
-router.post('/authenticate' , (req , res , next) => {
-    res.send('REGISTER');
+router.get('/authenticate' , (req , res , next) => {
+    res.send('AUTHENTICATE');
 });
 
 //Profile
 router.get('/profile' , (req , res , next) => {
-    res.json({user: req.user});
+    res.send('PROFILE');
 });
 
 module.exports = router;
